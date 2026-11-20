@@ -1,0 +1,16 @@
+---
+description: Never clone/install/run untrusted external repos without a security check and user OK
+alwaysApply: true
+---
+
+# Safe handling of external / shared repos
+
+Before cloning, installing dependencies, building Docker from an unknown Dockerfile, or running scripts from a third-party or “shared” repo (including job practical tests, HR links, random GitHub repos):
+
+1. Inspect the repo first (README, install scripts, package hooks, obfuscated code, unexpected network/credential access).
+2. Tell the user what looks safe vs risky.
+3. Wait for explicit user approval before clone/install/run.
+
+Prefer reading docs or building from scratch over executing untrusted code.
+
+“Job test” or “practical assignment” repos are **not** automatically safe.
